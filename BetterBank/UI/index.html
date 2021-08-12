@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BetterBank</title>
+        <meta charset="utf-8">
+        <link href="reset.css" rel="stylesheet" type="text/css">
+        <link href="main.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+        <script src="hehe.js"></script>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script src="index.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="bankPanel">
+            <div class="nav">
+                <span class="bankName">BETTERBANK</span>
+                <span>
+                    <span class="playerName"></span>
+                    <span class="tire"> - </span>
+                    <span class="playerIBAN"></span>
+                </span>
+            </div>
+            <div class="solMenu">
+                <a class="buttonislemler" href="#yatirID"><i class="fas fa-vote-yea"></i>  Para Yatır</a>
+                <div class="kaydir" id="yatirID">
+                    <input type="text" class="textislemler" id="yatirText">
+                    <button class="yapbutton" id="parayiYatir"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <a type="button" class="buttonislemler" href="#cekID"><i class="fas fa-hand-holding-usd"></i>  Para Çek</a>
+                <div class="kaydir" id="cekID">
+                    <input type="text" class="textislemler" id="cekText">
+                    <button class="yapbutton" id="paraCek"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <a type="button" class="buttonislemler" href="#transferID"><i class="fas fa-donate"></i>  Transfer</a>
+                <div class="kaydiruzun" id="transferID">
+                    <input type="text" class="textislemler" id="targetAmount">
+                    <input type="text" class="textislemler" id="targetIBAN" placeholder="IBAN">
+                    <button class="yapbutton" id="IBANParaGonder"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <button type="button" class="buttonislemler" id="cikis"><i class="fas fa-sign-out-alt"></i>  Çıkış</button>
+            </div>
+            <div class="ortaMenu">
+                <div class="ortaUst">
+                    <p class="hesapBakiyesi"><b>Hesap Bakiyesi</b></p>
+                    <p id="playerMoneyAmount"></p>
+                </div>
+                <div class="ortaAlt">
+                    <p class="sonislemlertext"><b>Son İşlemler</b></p>
+                    <div id="islemler">
+                        <!--
+                        <div class="islem"><div class="islemIconHolder"><i class="fal fa-chart-line"></i></div><div class="islemBilgiHolder"><p class="islemTuruText">Para Yatırma</p><span class="yatirilanMiktar">$500.000,00</span><span class="islemZaman">03-05-2021 00:20</span></div></div>
+                        <div class="islem"><div class="islemIconHolder"><i class="fal fa-chart-line-down"></i></div><div class="islemBilgiHolder"><p class="islemTuruText">Para Çekme</p><span class="cekilenMiktar">$500.000,00</span><span class="islemZaman">03-05-2021 00:20</span></div></div>
+                        <div class="islem"><div class="islemIconHolder"><i class="fal fa-exchange"></i></div><div class="islemBilgiHolder"><div class="tranferUstHolder"><p class="islemTuruText" >Transfer <a class="gonderenGonderilenBilgi">Orkun Şakşak - WR64G5</a></p></div><span class="transferGelenMiktar">$500.000,00</span><span class="islemZaman">03-05-2021 00:20</span></span></div></div>
+                        <div class="islem"><div class="islemIconHolder"><i class="fal fa-exchange"></i></div><div class="islemBilgiHolder"><div class="tranferUstHolder"><p class="islemTuruText" >Transfer <a class="gonderenGonderilenBilgi">Orkun Şakşak - WR64G5</a></p></div><span class="transferGidenMiktar">$500.000,00</span><span class="islemZaman">03-05-2021 00:20</span></span></div></div>
+                        -->
+                    </div>
+                </div>
+            </div>
+            <div class="sagMenu">
+                <span><b>Faturalar</b></span>
+                <div class="faturalar">
+                    <!--
+                    <div class="fatura">
+                        <span class="faturaTarih">09-05-2021 08:22</span>
+                        <button type="button" class="faturaOdeButton">Öde</button>
+                        <p class="faturaGonderenIsım">Orkun Şakşak</p>
+                        <span class="faturaAciklama">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae, minus provident.</span>
+                        <span class="faturaDurum">Beklemede</span>
+                        <span class="faturaUcret">$500,00</span>
+                    </div>
+                    -->
+                </div>
+                <div class="sagalt">
+                    <input type="checkbox" class="toggledark" id="toggledark">
+                    <label for="toggledark" class="darklabel">
+                        <div class="darkball"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="dark displaynone">
+            <div id="basarili"><i class="fal fa-check-circle"></i><br><p class="basariliText"></p></div>
+        </div>
+    </body>
+</html>

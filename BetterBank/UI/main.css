@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Source+Sans+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Kodchasan&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 22px;
+}
+
+* {
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    outline: none;
+    user-select: none;
+}
+
+i {
+    font-size: 25px;
+}
+
+.bankPanel {
+    width: 1344px;
+    height: 700px;
+    /* Eski Background
+    background: rgb(232,232,232);
+    background: linear-gradient(45deg, rgba(232,232,232,1) 0%, rgba(238,238,238,1) 16%, rgba(236,236,236,1) 34%, rgba(224,224,224,1) 48%, rgba(238,238,238,1) 69%, rgba(238,238,238,1) 75%, rgba(222,222,222,1) 100%);
+    */
+    /* Yeni Background */
+    background: rgb(236,242,255);
+    background: linear-gradient(23deg, rgba(236,242,255,1) 2%, rgba(241,245,252,1) 16%, rgba(238,244,255,1) 31%, rgba(235,239,247,1) 59%, rgba(243,245,251,1) 74%, rgba(244,246,251,1) 80%, rgba(238,238,238,1) 90%, rgba(230,230,230,1) 100%);
+    border-radius: 8px;
+}
+
+.nav {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.253);
+}
+
+.bankName {
+    font-family: 'Fugaz One', cursive;
+    font-size: 30px;
+}
+
+.sonislemlertext {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.solMenu {
+    height: 620px;
+    width: 30%;
+    padding: 60px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.253);
+    display: inline-flex;
+    float: left;
+    padding-top: 30px;
+    flex-direction: column;
+    position: relative;
+}
+
+.buttonislemler {
+    display: inline-flex;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    width: 100%;
+    height: 45px;
+    border-radius: 15px;
+    border: 0px solid;
+    text-align: left;
+    font-size: 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    background-color: transparent;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: 0.2s ease-out;
+}
+
+
+#cikis {
+    width: 73%;
+    position: absolute;
+    bottom: 5%;
+}
+
+.buttonislemler > i {
+    margin-right: 10px;
+}
+
+.buttonislemler:hover {
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
+.dolarIsaret {
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.textislemler {
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 1px black solid;
+    outline: none;
+    height: 35px;
+    font-size: 20px;
+    transition: 0.5s ease;
+    padding-left: 10px;
+    width: 70%;
+    margin-right: 10px;
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    line-height: 50px;
+}
+
+.yapbutton {
+    margin-top: 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: 0px solid;
+    background-color: transparent;
+    transition: 0.3s ease;
+}
+
+.yapbutton:hover {
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
+
+.kaydir {
+    background: transparent;
+    overflow: hidden;   
+    line-height: 50px;
+    transition: all .4s ease-in-out;
+    height: 0;
+}
+
+.kaydir:target {
+    height: 45px;
+}
+
+.kaydiruzun {
+    background: transparent;
+    overflow: hidden;   
+    line-height: 100px;
+    transition: all .4s ease-in-out;
+    height: 0;
+}
+
+.kaydiruzun:target {
+    height: 180px;
+}
+
+#targetIBAN {
+    width: 40%;
+}
+
+
+.ortaMenu {
+    width: 34%; /* 35% */
+    height: 620px;
+    padding: 50px;
+    padding-top: 50px;
+    display: inline-block;
+    box-sizing: border-box;
+    float: left;
+    padding-right: 0; /* Sonradan */
+}
+
+.ortaUst {
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+.hesapBakiyesi  {
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+}
+
+#playerMoneyAmount {
+    margin-top: -8px;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 43px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.ortaAlt {
+    height: 310px;
+}
+
+#islemler {
+    width: 90%;  /* 100% */
+    height: 250px;
+    display: inline-block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.islem {
+    box-sizing: border-box;
+    width: 99%;
+    height: 52px;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.fa-exchange {
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.fa-chart-line {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.fa-chart-line-down {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.fa-file-invoice-dollar {
+    font-size: 40px;
+}
+
+.tranferUstHolder {
+    height: 19px;
+    margin-top: 0;
+}
+
+.islemBilgiHolder {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.164);
+}
+
+.islemIconHolder {
+    width: 50px;
+    height: 40px;
+}
+
+.islemTuruText {
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    font-size: 15px;
+}
+
+.gonderenGonderilen {
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+.gonderenGonderilenBilgi {
+    float: right;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.500);
+}
+
+
+.islemZaman {
+    float: right;
+    margin-top: 4%;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.500);
+}
+
+#islemler::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+}
+
+#islemler::-webkit-scrollbar
+{
+	width: 8px;
+}
+
+#islemler::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: rgb(59, 59, 59);
+}
+
+.dark {
+    position: fixed !important;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+    display: block;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    z-index: 9999!important;
+}
+
+.displaynone {
+    display: none;
+}
+
+#basarili {
+    width: 455px;
+    height: 150px;
+    background: rgb(232,232,232);
+    background: linear-gradient(45deg, rgba(232,232,232,1) 0%, rgba(238,238,238,1) 16%, rgba(236,236,236,1) 34%, rgba(224,224,224,1) 48%, rgba(238,238,238,1) 69%, rgba(238,238,238,1) 75%, rgba(222,222,222,1) 100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fa-check-circle {
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.fa-times-circle {
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.basariliText {
+    margin-top: 12px;
+}
+
+.playerIBAN {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 25px;
+}
+
+.playerName {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 25px;
+}
+
+.tire {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 25px;
+}
+
+.sagMenu {
+    width: 36%;
+    height: 620px;
+    padding: 30px;
+    padding-top: 30px;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+/* Faturalar */
+
+.faturalar {
+    margin-top: 12px;
+    height: 88%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.fatura {
+    box-sizing: border-box;
+    height: 130px;
+    width: 46%;
+    background-color: rgb(239, 243, 245);
+    display: inline-block;
+    border-radius: 10px;
+    padding-top: 0px;
+    padding-left: 5px;
+    position: relative;
+    box-shadow: rgba(99, 99, 99, 0.041) 0px 2px 8px 0px;
+    border: 1px rgba(73, 73, 73, 0.055) solid;
+    margin-bottom: 15px;
+}
+
+.fatura:nth-child(even) {
+    margin-left: 10px;
+}
+
+.faturaTarih {
+    position: absolute;
+    font-size: 12px;
+    top: 3px;
+    color: rgb(164, 167, 170);
+}
+
+.faturaOdeButton {
+    display: inline-flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    background-color: rgb(124, 166, 99);
+    color: white;
+    height: 13px;
+    width: 45px;
+    font-size: 12px;
+    transition: 500ms ease;
+}
+
+.faturaOdeButton:hover {
+    background-color: rgb(106, 141, 85);
+}
+
+.faturaGonderenIsım {
+    margin-top: 16px;
+    margin-bottom: 0px;
+}
+
+.faturaAciklama {
+    position: absolute;
+    font-size: 14px;
+    margin-top: 1px;
+    color: rgb(144, 147 , 150);
+}
+
+.faturaDurum {
+    position: absolute;
+    bottom: 8px;
+    font-size: 13px;
+}
+
+.faturaUcret {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 19px;
+}
+
+.faturalar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Faturalar */
+
+.toggledark {
+    opacity: 0;
+    position: absolute;
+}
+
+.sagalt {
+    display: inline-block;
+    position: absolute;
+    bottom: 5%;
+    right: 13%;
+}
+
+.darklabel {
+    box-sizing: border-box;
+    background-color: #111;
+    display: flex;
+    border-radius: 50px;
+    height: 26px;
+    width: 50px;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.darkball {
+    background-color: #fff;
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+#toggledark:checked + .darklabel .darkball {
+    transform: translateX(24px);
+}
+
+#toggledark:checked + .bankPanel  {
+    background: rgb(19,19,19);
+    background: linear-gradient(23deg, rgba(19,19,19,1) 2%, rgba(20,20,20,1) 16%, rgba(14,14,14,1) 31%, rgba(38,38,38,1) 59%, rgba(43,43,43,1) 73%, rgba(43,43,43,1) 81%, rgba(37,37,37,1) 90%, rgba(34,34,34,1) 100%);
+}
+
+#toggledark[type="checkbox"]:checked + .bankPanel {
+    background: rgb(19,19,19);
+    background: linear-gradient(23deg, rgba(19,19,19,1) 2%, rgba(20,20,20,1) 16%, rgba(14,14,14,1) 31%, rgba(38,38,38,1) 59%, rgba(43,43,43,1) 73%, rgba(43,43,43,1) 81%, rgba(37,37,37,1) 90%, rgba(34,34,34,1) 100%);
+}
+
+.bankPanel.darkness {
+    transition: 0.3s ease;
+    background: rgb(19,19,19);
+    background: linear-gradient(23deg, rgba(19,19,19,1) 2%, rgba(20,20,20,1) 16%, rgba(14,14,14,1) 31%, rgba(38,38,38,1) 59%, rgba(43,43,43,1) 73%, rgba(43,43,43,1) 81%, rgba(37,37,37,1) 90%, rgba(34,34,34,1) 100%);
+    color: white;
+}
+
+#basarili.darkness {
+    color: white;
+    background: rgb(19,19,19);
+    background: linear-gradient(23deg, rgba(19,19,19,1) 2%, rgba(20,20,20,1) 16%, rgba(14,14,14,1) 31%, rgba(38,38,38,1) 59%, rgba(43,43,43,1) 73%, rgba(43,43,43,1) 81%, rgba(37,37,37,1) 90%, rgba(34,34,34,1) 100%);
+}
+
+button.darkness {
+    color: white;
+}
+
+a.darkness {
+    color: white;
+}
+
+.fatura.darkness { 
+    background-color: rgb(33, 34, 34);
+    box-shadow: rgba(192, 191, 191, 0.041) 0px 2px 8px 0px;
+    border: 1px rgba(190, 187, 187, 0.055) solid;
+}
+
+.islemZaman.darkness {
+    color: rgb(206, 206, 206) !important;
+}
+
+#islemler.darkness::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: rgb(150, 150, 150);
+}
+
+.textislemler.darkness {
+    color: white;
+    border-bottom: 1px white solid;
+}
+
+/* dark mode için yerini değiştirme */
+.yatirilanMiktar {
+    display: inline-block;
+    margin: 0;
+    color: rgb(0, 145, 0) !important;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 10px;
+}
+
+.cekilenMiktar {
+    display: inline-block;
+    margin: 0;
+    color: rgb(138, 1, 1) !important;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 10px;
+}
+
+.transferGelenMiktar {
+    display: inline-block;
+    margin: 0;
+    color: rgb(0, 145, 0) !important;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 10px;
+}
+
+.transferGidenMiktar {
+    display: inline-block;
+    margin: 0;
+    color: rgb(138, 1, 1) !important;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 10px;
+}
+/* dark mode için yerini değiştirme */
