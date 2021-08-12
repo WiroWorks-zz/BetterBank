@@ -4,7 +4,7 @@ CREATE TABLE `betterbanksave` (
 	`neKadar` VARCHAR(20) NULL DEFAULT '' COLLATE 'utf8mb4_bin',
 	`neZaman` VARCHAR(30) NULL DEFAULT '' COLLATE 'utf8mb4_bin',
 	`kimden` VARCHAR(20) NULL DEFAULT '' COLLATE 'utf8mb4_bin'
-)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `billing` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
@@ -16,7 +16,7 @@ CREATE TABLE `billing` (
 	`neZaman` VARCHAR(40) NOT NULL COLLATE 'utf8mb4_bin',
 	`durum` VARCHAR(20) NOT NULL DEFAULT 'Beklemede' COLLATE 'utf8mb4_bin',
 	PRIMARY KEY (`id`) USING BTREE
-)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ALTER TABLE `users`
 ADD COLUMN `IBAN` VARCHAR(6) NOT NULL DEFAULT '0'
